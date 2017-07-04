@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="pingtingpeng的技术博客,技术博客" name="keywords">
+  <meta content="pingtingpeng的技术博客" name="description">
+  <title>pingtingpeng's blog</title>
+  <!-- <link rel="stylesheet" type="text/css" href="./dist/common.css"> -->
+  <link rel="stylesheet" type="text/css" href="./dist/common.css">
+  <!-- <link rel="stylesheet" type="text/css" href="./dist/main.css"> -->
+</head>
+<body>
+<div class="header clear-fix">
+    <img class='avatar' src="./img/author.jpg">
+
+    <ul class="nav">
+      <li>
+        <a href="/">首页</a>
+      </li>
+      <li>
+        <a href="/about">关于</a>
+      </li>
+      <li>
+        <a href="/list">博客列表</a>
+      </li>
+      <% if(hasUser){%>
+      <li>
+        <a href="/manage">写博客</a>
+      </li>
+      <li>
+        <a href="/logout">登出</a>
+      </li>
+      <%}%>
+      <li>
+
+        <form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+          <a>搜索</a>
+          <input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
+          <input type="hidden" name="q" value="site:simple-peng.github.io/">
+        </form>
+      </li>
+    </ul>
+</div>
+
