@@ -3,8 +3,8 @@
 *2017.06.25
  */
 const http = require('http');
-// const PORT =7000;
-const PORT =process.env.PORT||5000;
+const PORT =7000;
+// const PORT =process.env.PORT||5000;
 const App = require('./app');
 let app = new App();
 const staticServer  = require('./app/static-server');
@@ -20,8 +20,8 @@ app.use(viewServer);
 
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-// mongoose.connect('mongodb://localhost/blogDB');
-mongoose.connect('mongodb://pingtingpeng:pptmlab0107y@ds147902.mlab.com:47902/blog')
+mongoose.connect('mongodb://localhost/blogDB');
+// mongoose.connect('mongodb://pingtingpeng:pptmlab0107y@ds147902.mlab.com:47902/blog')
 mongoose.connection.on('error',(error)=>{
   console.log(`db connection Error`);
 })
